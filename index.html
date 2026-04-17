@@ -2,17 +2,47 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
-
     <title>Newsletter</title>
 </head>
 
-<body>
+<body class="landing">
+
+<div class="top-bar">
+    <div class="title">
+        NEWSLETTER
+        <span>Matthias Schott</span>
+    </div>
+</div>
 
 
+
+<div class="newsletter-card">
+    <div class="newsletter-text">
+        <h1>GitHub Newsletter</h1>
+        <p>Hier erhalten Sie automatisiert eine Infomail, wenn ich in einem GitHub Projekt auf Mainbranch pushe.</p>
+    </div>
+
+    <form id="newsletterForm">
+        <input type="email" name="email" placeholder="E-Mail" required>
+        <button type="submit">Anmelden</button>
+    </form>
+
+    <p id="message"></p>
+</div>
+
+<footer class="bottom-bar">
+    <div></div>
+
+    <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <span class="divider"></span>
+        <a href="datenschutz.html">Datenschutz</a>
+    </div>
+
+    <div class="footer-right">© 2026 Matthias Schott</div>
+</footer>
 
 </body>
 </html>
