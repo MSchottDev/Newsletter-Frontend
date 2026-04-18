@@ -2,9 +2,18 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Newsletter für GitHub Projekt-Updates von Matthias Schott">
+
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
-    <title>Newsletter</title>
+
+    <link rel="preload" href="Images/bg.jpg" as="image" fetchpriority="high">
+    <link rel="icon" href="Images/favicon.ico">
+
+    <title>GitHub Projekt Newsletter – Matthias Schott</title>
 </head>
 
 <body class="landing">
@@ -16,20 +25,49 @@
     </div>
 </div>
 
-
-
 <div class="newsletter-card">
+
+    <!-- GITHUB ICON -->
+    <div class="newsletter-icon">
+        <img src="Images/github.png" alt="GitHub Logo">
+    </div>
+
     <div class="newsletter-text">
-        <h1>GitHub Newsletter</h1>
-        <p>Hier erhalten Sie automatisiert eine Infomail, wenn ich in einem GitHub Projekt auf Mainbranch pushe.</p>
+        <h1>Projekt-Updates per E-Mail</h1>
+        <p>
+            Erhalte automatisch eine Benachrichtigung, sobald es neue Updates oder Fortschritte 
+            in meinen GitHub-Projekten gibt.
+        </p>
     </div>
 
     <form id="newsletterForm">
-        <input type="email" name="email" placeholder="E-Mail" required>
-        <button type="submit">Anmelden</button>
+
+        <label for="email">E-Mail-Adresse</label>
+        <input 
+            id="email"
+            type="email"
+            name="email"
+            placeholder="max.mustermann@email.de"
+            autocomplete="email"
+            required
+        >
+
+        <label class="checkbox">
+            <input type="checkbox" required>
+            <span>
+                Ich stimme der Verarbeitung meiner Daten gemäß der 
+                <a href="datenschutz.html">Datenschutzerklärung</a> zu.
+            </span>
+        </label>
+
+        <button type="submit">Updates erhalten</button>
+
     </form>
 
-    <p id="message"></p>
+    <p class="trust">Kein Spam. Abmeldung jederzeit möglich.</p>
+
+    <p id="message" class="message"></p>
+
 </div>
 
 <footer class="bottom-bar">
