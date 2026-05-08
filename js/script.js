@@ -30,6 +30,12 @@ document.getElementById("newsletterForm").addEventListener("submit", async funct
         messageElement.style.color = "green";
 
         document.getElementById("newsletterForm").reset();
+
+        
+        
+        // Wechsel Seitenstatus EINGABE auf ERFOLG
+        document.getElementById("form-state").style.display = "none";
+        document.getElementById("success-state").style.display = "block";
     }
     else {
         

@@ -25,48 +25,74 @@
     </div>
 </div>
 
-<div class="newsletter-card">
+<!-- Container Seitenstatus -->
+<div class="newsletter-card" id="app">
 
-    <!-- GITHUB ICON -->
-    <div class="newsletter-icon">
-        <img src="Images/github.png" alt="GitHub Logo">
+    
+    
+    <!-- Seitenstatus EINGABE -->
+    <div id="form-state">
+
+        <!-- GITHUB ICON -->
+        <div class="newsletter-icon">
+            <img src="Images/github.png" alt="GitHub Logo">
+        </div>
+
+        <div class="newsletter-text">
+            <h1>Projekt-Updates per E-Mail</h1>
+            <p>
+                Erhalte automatisch eine Benachrichtigung, sobald es neue Updates oder Fortschritte 
+                in meinen GitHub-Projekten gibt.
+            </p>
+        </div>
+
+        <form id="newsletterForm">
+
+            <label for="email">E-Mail-Adresse</label>
+            <input 
+                id="email"
+                type="email"
+                name="email"
+                placeholder="max.mustermann@email.de"
+                autocomplete="email"
+                required
+            >
+
+            <label class="checkbox">
+                <input type="checkbox" required>
+                <span>
+                    Ich stimme der Verarbeitung meiner Daten gemäß der 
+                    <a href="datenschutz.html">Datenschutzerklärung</a> zu.
+                </span>
+            </label>
+
+            <button type="submit">Updates erhalten</button>
+
+        </form>
+
+        <p class="trust">Kein Spam. Abmeldung jederzeit möglich.</p>
+
+        <p id="message" class="message"></p>
+
     </div>
 
-    <div class="newsletter-text">
-        <h1>Projekt-Updates per E-Mail</h1>
-        <p>
-            Erhalte automatisch eine Benachrichtigung, sobald es neue Updates oder Fortschritte 
-            in meinen GitHub-Projekten gibt.
+    
+    
+    <!-- Seitenstatus ERFOLG -->
+    <div id="success-state" style="display:none; text-align:center; padding:20px;">
+
+        <h1 style="color:#22c55e;">Erfolgreich registriert</h1>
+
+        <p style="color:rgba(255,255,255,0.75); line-height:1.6;">
+            Deine E-Mail wurde erfolgreich gespeichert.<br>
+            Bitte bestätige die Anmeldung über den Link in deinem Postfach.
         </p>
+
+        <p style="color:rgba(255,255,255,0.5); font-size:13px;">
+            Du kannst diese Seite jetzt schließen.
+        </p>
+
     </div>
-
-    <form id="newsletterForm">
-
-        <label for="email">E-Mail-Adresse</label>
-        <input 
-            id="email"
-            type="email"
-            name="email"
-            placeholder="max.mustermann@email.de"
-            autocomplete="email"
-            required
-        >
-
-        <label class="checkbox">
-            <input type="checkbox" required>
-            <span>
-                Ich stimme der Verarbeitung meiner Daten gemäß der 
-                <a href="datenschutz.html">Datenschutzerklärung</a> zu.
-            </span>
-        </label>
-
-        <button type="submit">Updates erhalten</button>
-
-    </form>
-
-    <p class="trust">Kein Spam. Abmeldung jederzeit möglich.</p>
-
-    <p id="message" class="message"></p>
 
 </div>
 
