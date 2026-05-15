@@ -79,6 +79,7 @@ body::before {
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
     z-index: 10;
 }
 
@@ -103,6 +104,28 @@ body::before {
     margin-top: 6px;
 }
 
+.close-button {
+    margin-left: auto;
+    margin-right: 20px;
+    background: transparent;
+    border: none;
+
+    color: rgba(255,255,255,0.75);
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.close-button:hover {
+    color: #ffffff;
+    transform: scale(1.12);
+}
+
 /* =========================
    LANDING PAGE
 ========================= */
@@ -114,11 +137,13 @@ body.landing {
 
 /* CARD */
 .newsletter-card {
-    width: 460px;
-    max-width: 92%;
-
+    width: min(460px, 92vw);
+    /*min-width: 460px;
+    max-width: 92%;*/
+    display: flex;
+    flex-direction: column;
     padding: 34px 42px;
-
+    
     text-align: center;
     line-height: 1.45;
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
@@ -157,6 +182,7 @@ body.landing {
     color: rgba(255, 255, 255, 0.75);
 
     max-width: 320px;
+    
     margin: 0 auto 22px auto;
 }
 
@@ -285,10 +311,40 @@ body.landing {
 }
 
 /* =========================
+   Message: Email schon vorhanden
+   ==============================*/
+.message {
+    margin-top: 14px;
+
+    min-height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.message-icon {
+    font-size: 15px;
+    line-height: 1;
+    position: relative;
+    top: -1px;
+
+    color: #ef4444;
+}
+
+.message-text {
+    color: #ef4444;
+}
+
+/* =========================
    SUCCESS STATE
 ========================= */
 
-#success-state {
+#success-state-index {
     display: none;
 
     text-align: center;
@@ -298,12 +354,16 @@ body.landing {
     animation: fadeIn 0.35s ease;
 }
 
-#success-state p {
-    margin-bottom: 16px;
+#success-state-index p {
+    /*margin-bottom: 16px;*/
 
     color: rgba(255,255,255,0.82);
 
     line-height: 1.6;
+}
+#success-state-index,
+#success-state-status {
+    animation: fadeIn 0.35s ease;
 }
 
 @keyframes fadeIn {
@@ -318,6 +378,45 @@ body.landing {
     }
 }
 
+/*==========================
+   Status header
+   =========================*/
+.status-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.status-title {
+    margin: 0;
+    line-height: 1;
+}
+
+.status-icon {
+    font-size: 22px;
+    font-weight: bold;
+
+    line-height: 1;
+
+    position: relative;
+    top: -5px;
+    
+}
+
+.status-success {
+    color: #22c55e; /* grün */
+}
+
+.status-error {
+    color: #ef4444; /* rot */
+}
+
+.status-warning {
+    color: #f59e0b; /* gelb */
+}
 
 /* =========================
    TRUST TEXT (FIXED)
@@ -333,6 +432,24 @@ body.landing {
 .message {
     margin-top: 12px;
     font-size: 13px;
+}
+
+
+#form-state {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    height: 100%;
+}
+/*========================
+   GitHub Legal
+   ======================*/
+.legal-note {
+    margin-top: auto;
+    font-size: 12px;
+    opacity: 0.45;
+    line-height: 1.4;
+    text-align: center;
 }
 
 /* =========================
@@ -443,3 +560,6 @@ body.legal {
     justify-self: end;
     color: #ffffff;
 }
+
+
+

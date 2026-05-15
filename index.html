@@ -23,6 +23,9 @@
         NEWSLETTER
         <span>Matthias Schott</span>
     </div>
+    <button class="close-button" id="closeButton">
+        ✕
+    </button>
 </div>
 
 <!-- Container Seitenstatus -->
@@ -41,7 +44,7 @@
         <div class="newsletter-text">
             <h1>Projekt-Updates per E-Mail</h1>
             <p>
-                Erhalte automatisch eine Benachrichtigung, sobald es neue Updates oder Fortschritte 
+                Erhalten Sie automatisch eine Benachrichtigung, sobald es neue Updates oder Fortschritte 
                 in meinen GitHub-Projekten gibt.
             </p>
         </div>
@@ -71,28 +74,35 @@
         </form>
 
         <p class="trust">Kein Spam. Abmeldung jederzeit möglich.</p>
+        
 
-        <p id="message" class="message"></p>
-
+        <div id="message" class="message">
+            <span id="messageIcon" class="message-icon"></span>
+            <span id="messageText"></span>
+        </div>
+        
     </div>
 
     
     
     <!-- Seitenstatus ERFOLG -->
-    <!--div id="success-state" style="display:none; text-align:center; padding:20px;"-->
-    <div id="success-state">
+    
+    <div id="success-state-index">
+
+        <div class="newsletter-icon">
+        <img src="Images/github.png" alt="GitHub Logo">
+        </div>
 
         
 
         <p>
-            Deine E-Mail wurde erfolgreich gespeichert.<br>
-            Bitte bestätige die Anmeldung über den Link in deinem Postfach.
+            Bitte bestätigen Sie die Anmeldung über den Button in Ihrem Postfach.
         </p>
 
         
 
     </div>
-
+    <div class="legal-note">GitHub ist Marke der GitHub, Inc.</div>
 </div>
 
 <footer class="bottom-bar">

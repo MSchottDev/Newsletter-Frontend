@@ -21,13 +21,12 @@ document.getElementById("newsletterForm").addEventListener("submit", async funct
 
     if (response.status === 409) {
         
-        messageElement.innerText = "Diese Email ist bereits registriert.";
-        messageElement.style.color = "red";
+        document.getElementById("messageIcon").innerText = "✕";
+        document.getElementById("messageText").innerText = "Diese Email ist bereits registriert.";
     }
     else if (response.ok) {
         
-        messageElement.innerText = result.message;
-        messageElement.style.color = "green";
+        
 
         document.getElementById("newsletterForm").reset();
 
@@ -35,11 +34,19 @@ document.getElementById("newsletterForm").addEventListener("submit", async funct
         
         // Wechsel Seitenstatus EINGABE auf ERFOLG
         document.getElementById("form-state").style.display = "none";
-        document.getElementById("success-state").style.display = "block";
+        document.getElementById("success-state-index").style.display = "block";
     }
     else {
         
         messageElement.innerText = "Ein Fehler ist aufgetreten.";
         messageElement.style.color = "red";
     }
+});
+
+// close-Button
+document
+    .getElementById("closeButton")
+    .addEventListener("click", () => {
+
+        window.close();
 });
