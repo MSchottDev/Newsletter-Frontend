@@ -140,6 +140,9 @@ body.landing {
     width: min(460px, 92vw);
     /*min-width: 460px;
     max-width: 92%;*/
+    
+    position: relative;
+    
     display: flex;
     flex-direction: column;
     padding: 34px 42px;
@@ -444,8 +447,18 @@ body.landing {
 /*========================
    GitHub Legal
    ======================*/
-.legal-note {
-    margin-top: auto;
+.status-footer {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 10px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.git-legal-note {
     font-size: 12px;
     opacity: 0.45;
     line-height: 1.4;
