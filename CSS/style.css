@@ -158,8 +158,8 @@ body.landing {
 
     color: #ffffff;
 
-    background: rgba(20, 24, 31, 0.2);
-    backdrop-filter: blur(1px);
+    /*background: rgba(20, 24, 31, 0.2);
+    backdrop-filter: blur(1px);*/
 
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 22px;
@@ -368,52 +368,64 @@ body.landing {
 }
 
 /* =========================
-   LEGAL PAGES
-========================= */
-.legal-card {
-    width: min(720px, 92vw);
-    text-align: center;
-    line-height: 1.7;
-}
-
-/* =========================
-   LEGAL TYPOGRAPHY SYSTEM
+   LEGAL
 ========================= */
 
-.legal-card h1 {
-    font-size: 28px;
-    margin-bottom: 18px;
-    letter-spacing: 0.02em;
+body.legal {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.legal-card h2 {
-    font-size: 16px;
-    margin-top: 22px;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.legal-card p {
-    font-size: 14px;
-    line-height: 1.65;
-    margin-bottom: 12px;
-    color: rgba(255, 255, 255, 0.85);
-}
-
-
-.legal-card p:last-child {
-    margin-bottom: 0;
-}
-
-/* WRAPPER */
 .legal-wrapper {
+    flex: 1;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 
-    padding: 120px 20px 80px;
+    padding: 140px 20px 100px;
     gap: 18px;
+}
+
+.legal-content {
+    max-width: 650px;
+    width: 100%;
+
+    padding: 32px;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    text-align: center;
+
+    background: rgba(20, 24, 31, 0.5);
+    backdrop-filter: blur(2px);
+
+    border: 2px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+
+    color: #ffffff;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+.legal-content h1 {
+    margin-bottom: 18px;
+}
+
+.legal-content p {
+    margin-bottom: 12px;
+}
+
+.back-link {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: #ffffff;
 }
 
 /* =========================
@@ -488,4 +500,46 @@ body.landing {
     .status-icon {
         font-size: 22px;
     }
+}
+
+
+/* Klasse Glas für allg. Eigenschaft für Cards die diesen Effekt haben sollen*/
+.glass {
+    /*background: rgba(20, 24, 31, 0.2);*/
+    backdrop-filter: blur(0.0px);
+    -webkit-backdrop-filter: blur(0.0px);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+
+    transition:
+        backdrop-filter 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        transform 0.25s ease;
+}
+.glass:hover {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    background: rgba(20, 24, 31, 0.32);
+
+    border-color: rgba(56, 189, 248, 0.25);
+
+    box-shadow:
+        0 0 18px rgba(56, 189, 248, 0.10);
+
+    
+}
+.glass:hover .logo {
+    opacity: 1;
+    filter: grayscale(0%) brightness(1.2) drop-shadow(0 0 10px rgba(56, 189, 248, 0.25));
+    /*transform: scale(1.05);*/
+}
+
+
+/* Backlink*/
+.back-link {
+    align-self: center;
 }
