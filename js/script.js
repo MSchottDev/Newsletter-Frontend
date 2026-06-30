@@ -42,8 +42,8 @@ document
         // hier ert den Modus des Submitt-Buttons abfragen für subscribe oder resend
         const mode = submitButton.dataset.mode;
         // Deploy: "https://localhost:7136/api/subscribers"
-        // Produktion: "https://api.newsletter.mschott.dev/api/subscribers"
-        let url = "https://api.newsletter.mschott.dev/api/subscribers";
+        // Produktion: "https://app.newsletter.mschott.dev/api/subscribers"
+        let url = "https://app.newsletter.mschott.dev/api/subscribers";
         
         if (mode === "resend") {
             url += "/resend-confirmation";
