@@ -471,6 +471,9 @@ body.legal {
     color: #fff;
 }
 
+.footer-links a:hover {
+    color: #ffffff;
+}
 /* =========================
    MOBILE
 ========================= */
