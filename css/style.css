@@ -11,6 +11,28 @@
     padding: 0;
 }
 
+
+/* FORM FILL DEFAULTS*/
+:root {
+    color-scheme: dark;
+}
+
+
+/* normale Felder */
+.form-group input,
+.form-group textarea {
+    background: rgba(255,255,255,0.04);
+    color: white;
+}
+
+
+/* Chrome / Edge Autofill */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0 1000px rgba(20,24,31,0.95) inset;
+}
+
 /* =========================
    GLOBAL
 ========================= */
