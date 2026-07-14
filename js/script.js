@@ -16,6 +16,8 @@ document
     .addEventListener("submit", async function (e) {
 
     e.preventDefault();
+    showButtonLoading();
+    
 
     const email = e.target.email.value;
     
@@ -39,9 +41,11 @@ document
     
 
     try {
-        // hier ert den Modus des Submitt-Buttons abfragen für subscribe oder resend
+        // hier erst den Modus des Submitt-Buttons abfragen für subscribe oder resend
         const mode = submitButton.dataset.mode;
-        let url = "https://localhost:7136/api/subscribers";
+        // Produktion: "https://app.newsletter.mschott.dev/api/subscribers"
+        // Deploy: "https://localhost:7136/api/subscribers"
+        let url = "https://app.newsletter.mschott.dev/api/subscribers";
         
         if (mode === "resend") {
             url += "/resend-confirmation";
@@ -74,6 +78,7 @@ document
             
             submitButton.innerText = "Neu senden";
             submitButton.dataset.mode = "resend";
+            hideButtonLoading();
 
             return;
         }
@@ -98,13 +103,14 @@ document
 
             statusMessage.innerText =
                 "Sie erhalten eine Email mit dem Beestätigungs-Link.Bitte schauen Sie auch in Ihrem Spam-Ordner nach.";
-
+            
+            hideButtonLoading();
             return;
         }
 
         
         // error
-        
+        hideButtonLoading();
         formIcon.innerText = "!";
         formIcon.className = "message-icon status-error";
 
@@ -112,7 +118,7 @@ document
             "Ein Fehler ist aufgetreten.";
 
     } catch (error) {
-
+        hideButtonLoading();
         formIcon.innerText = "!";
         formIcon.className = "message-icon status-error";
 
