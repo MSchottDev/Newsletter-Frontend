@@ -17,6 +17,8 @@ document
 
     e.preventDefault();
     showButtonLoading();
+    // TEST: Ladeanimation sichtbar machen
+    await new Promise(resolve => setTimeout(resolve, 10000));
     
 
     const email = e.target.email.value;
