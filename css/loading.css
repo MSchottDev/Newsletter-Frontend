@@ -61,10 +61,3 @@
 
 }
 
-.button-loader {
-    display: flex !important;
-    border: 2px solid yellow !important;
-    background: red !important;
-    min-width: 40px;
-    min-height: 20px;
-}

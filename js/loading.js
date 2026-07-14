@@ -5,18 +5,15 @@ const buttonLoader = button.querySelector(".button-loader");
 
 
 function showButtonLoading() {
+
     console.log("Loader gestartet");
 
     button.disabled = true;
 
-    /*buttonText.classList.add("is-hidden");
-    buttonLoader.classList.remove("button-loader-hidden");*/
+    buttonText.classList.add("is-hidden");
+    buttonLoader.classList.remove("button-loader-hidden");
 
-    buttonText.style.display = "none";
-    buttonLoader.style.display = "flex";
-
-    console.log(buttonLoader.classList);
-
+    console.log(buttonLoader.className);
 }
 
 
