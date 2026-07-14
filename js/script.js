@@ -31,7 +31,7 @@ document
     const statusIcon = document.getElementById("icon");
     const statusTitle = document.getElementById("title");
     const statusMessage = document.getElementById("status-message");
-    const submitButton = document.getElementById("submitButton");
+    
 
     
     // reset textmessage

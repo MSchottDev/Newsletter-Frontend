@@ -1,4 +1,4 @@
-const submitButton = document.getElementById("submitButton");
+const button = document.getElementById("submitButton");
 
 const buttonText = submitButton.querySelector(".button-text");
 const buttonLoader = submitButton.querySelector(".button-loader");
@@ -6,7 +6,7 @@ const buttonLoader = submitButton.querySelector(".button-loader");
 
 function showButtonLoading() {
 
-    submitButton.disabled = true;
+    button.disabled = true;
 
     buttonText.classList.add("is-hidden");
     buttonLoader.classList.remove("is-hidden");
@@ -16,7 +16,7 @@ function showButtonLoading() {
 
 function hideButtonLoading() {
 
-    submitButton.disabled = false;
+    button.disabled = false;
 
     buttonText.classList.remove("is-hidden");
     buttonLoader.classList.add("is-hidden");
