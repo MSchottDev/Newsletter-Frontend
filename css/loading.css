@@ -21,7 +21,7 @@
     gap: 5px;
 }
 
-.button-loader.is-hidden {
+.button-loader-hidden {
     display: none;
 }
 

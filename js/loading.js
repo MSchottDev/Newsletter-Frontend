@@ -9,8 +9,8 @@ function showButtonLoading() {
 
     button.disabled = true;
 
-    buttonText.classList.add("is-hidden");
-    buttonLoader.classList.remove("is-hidden");
+    buttonText.classList.add("button-loader-hidden");
+    buttonLoader.classList.remove("button-loader-hidden");
 
 }
 
@@ -19,7 +19,7 @@ function hideButtonLoading() {
 
     button.disabled = false;
 
-    buttonText.classList.remove("is-hidden");
-    buttonLoader.classList.add("is-hidden");
+    buttonText.classList.remove("button-loader-hidden");
+    buttonLoader.classList.add("button-loader-hidden");
 
 }
