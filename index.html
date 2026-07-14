@@ -6,8 +6,14 @@
 
     <meta name="description" content="Newsletter für GitHub Projekt-Updates von Matthias Schott">
 
+<<<<<<< HEAD
     <link rel="stylesheet" href="css/style.css">
+=======
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/loading.css">
+>>>>>>> develop
     <script src="js/common.js" defer></script>
+    <script src="js/loading.js" defer></script>
     <script src="js/script.js" defer></script>
 
     <link rel="preload" href="images/bg.jpg" as="image" fetchpriority="high">
@@ -94,7 +100,17 @@
             </div>
 
             <button type="submit" id="submitButton" data-mode="subscribe">
-                Updates erhalten
+
+                <span class="button-text">
+                    Updates erhalten
+                </span>
+
+                <span class="button-loader is-hidden">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
             </button>
 
         </form>
