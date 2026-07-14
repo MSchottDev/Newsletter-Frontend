@@ -43,13 +43,10 @@ document
     try {
         // hier erst den Modus des Submitt-Buttons abfragen für subscribe oder resend
         const mode = submitButton.dataset.mode;
-<<<<<<< HEAD
-        // Deploy: "https://localhost:7136/api/subscribers"
-        // Produktion: "https://app.newsletter.mschott.dev/api/subscribers"
-=======
+
         // Produktion: "https://app.newsletter.mschott.dev/api/subscribers"
         // Deploy: "https://localhost:7136/api/subscribers"
->>>>>>> develop
+
         let url = "https://app.newsletter.mschott.dev/api/subscribers";
         
         if (mode === "resend") {
