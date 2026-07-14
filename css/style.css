@@ -271,11 +271,32 @@ body.landing {
     gap: 10px;
     font-size: 12px;
     color: rgba(255,255,255,0.7);
+    line-height: 1.5;
 }
 
 .checkbox input {
     margin-top: 3px;
     accent-color: #2563eb;
+    flex-shrink: 0;
+}
+
+/* Datenschutz-Link */
+.checkbox a {
+    color: #60a5fa;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+}
+
+.checkbox a:visited {
+    color: #60a5fa;
+}
+
+.checkbox a:hover {
+    color: #93c5fd;
+}
+
+.checkbox a:active {
+    color: #60a5fa;
 }
 
 /* =========================

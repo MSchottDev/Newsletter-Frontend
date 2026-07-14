@@ -1,10 +1,11 @@
 const button = document.getElementById("submitButton");
 
-const buttonText = submitButton.querySelector(".button-text");
-const buttonLoader = submitButton.querySelector(".button-loader");
+const buttonText = button.querySelector(".button-text");
+const buttonLoader = button.querySelector(".button-loader");
 
 
 function showButtonLoading() {
+    console.log("Loader gestartet");
 
     button.disabled = true;
 
