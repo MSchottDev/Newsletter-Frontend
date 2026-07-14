@@ -9,10 +9,13 @@ function showButtonLoading() {
 
     button.disabled = true;
 
-    buttonText.classList.add("is-hidden");
-    buttonLoader.classList.remove("button-loader-hidden");
+    /*buttonText.classList.add("is-hidden");
+    buttonLoader.classList.remove("button-loader-hidden");*/
 
-    console.log(buttonLoader);
+    buttonText.style.display = "none";
+    buttonLoader.style.display = "flex";
+
+    console.log(buttonLoader.classList);
 
 }
 
@@ -21,7 +24,10 @@ function hideButtonLoading() {
 
     button.disabled = false;
 
-    buttonText.classList.remove("is-hidden");
-    buttonLoader.classList.add("button-loader-hidden");
+    /*buttonText.classList.remove("is-hidden");
+    buttonLoader.classList.add("button-loader-hidden");*/
+
+    buttonText.style.display = "inline";
+    buttonLoader.style.display = "none";
 
 }
