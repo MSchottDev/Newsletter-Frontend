@@ -1,9 +1,12 @@
 // Submittbutton immer auf Updates erhalten/subscribe schalten bei neuladen des dokuments und eintippen neuer email
 const emailInput = document.getElementById("email");
 const submitButton = document.getElementById("submitButton");
+/*const buttonText = submitButton.querySelector(".button-text");*/
 
 emailInput.addEventListener("input", () => {
-    submitButton.innerText = "Updates erhalten";
+    /*submitButton.innerText = "Updates erhalten";*/
+    /*buttonText.textContent = "Updates erhalten";*/
+    submitButton.querySelector(".button-text").textContent = "Updates erhalten";
     submitButton.dataset.mode = "subscribe";
 });
 
@@ -17,6 +20,7 @@ document
 
     e.preventDefault();
     showButtonLoading();
+    console.log("Submit-Handler läuft");
     // TEST: Ladeanimation sichtbar machen
     await new Promise(resolve => setTimeout(resolve, 10000));
     
@@ -80,7 +84,9 @@ document
                                 "Wenn Sie eine neue Bestätigungsmail benötigen, " +
                                 "klicken Sie einfach auf \"Neu senden\":";
             
-            submitButton.innerText = "Neu senden";
+            /*submitButton.innerText = "Neu senden";*/
+            /*buttonText.textContent = "Neu senden";*/
+            submitButton.querySelector(".button-text").textContent = "Neu senden";
             submitButton.dataset.mode = "resend";
             hideButtonLoading();
 
