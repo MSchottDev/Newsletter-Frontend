@@ -27,23 +27,34 @@
 
 
 .button-loader span {
-    width: 10px;
-    height: 8px;
+    width: 3px;
+    height: 3px;
 
-    background: rgb(50, 180, 216);
+    background: rgb(122, 160, 171);
     border-radius: 50%;
 
     animation: button-loading 1.2s infinite ease-in-out;
 }
 
 
-.button-loader span:nth-child(2) {
-    animation-delay: 0.2s;
+.button-loader span:nth-child(1) {
+    animation-delay: -0.8s;
 }
 
+.button-loader span:nth-child(2) {
+    animation-delay: -0.6s;
+}
 
 .button-loader span:nth-child(3) {
-    animation-delay: 0.4s;
+    animation-delay: -0.4s;
+}
+
+.button-loader span:nth-child(4) {
+    animation-delay: -0.2s;
+}
+
+.button-loader span:nth-child(5) {
+    animation-delay: 0s;
 }
 
 

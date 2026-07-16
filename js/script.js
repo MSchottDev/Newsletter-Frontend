@@ -78,11 +78,8 @@ document
             formIcon.className = "message-icon status-error";
             // hier noch ausgabe anpassen: message header + message text
             formText.innerText =
-                                "Diese E-Mail ist bereits vorhanden. " +
-                                "Klicken Sie auf \"Bestätigen\" in Ihrer Bestätigungsmail, " +
-                                "um die Registrierung abzuschließen. " +
-                                "Wenn Sie eine neue Bestätigungsmail benötigen, " +
-                                "klicken Sie einfach auf \"Neu senden\":";
+                                "E-Mail bereits vorhanden." +
+                                "Bestätigungsmail \"Neu senden\" ?";
             
             /*submitButton.innerText = "Neu senden";*/
             /*buttonText.textContent = "Neu senden";*/
