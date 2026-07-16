@@ -303,8 +303,12 @@ body.landing {
    BUTTON
 ========================= */
 .newsletter-card button {
+    height: 42px;
+    width: 200px;
     padding: 12px 28px;
+    margin: 0 auto;
     border-radius: 10px;
+    align-items: center;
     border: 1px solid rgba(255,255,255,0.14);
     background: rgba(255,255,255,0.03);
     color: #fff;
@@ -343,6 +347,7 @@ body.landing {
 }
 
 .message {
+    height: 20px;
     margin-top: 14px;
     display: flex;
     align-items: center;
