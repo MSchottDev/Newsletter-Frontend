@@ -74,21 +74,42 @@ document
         
         if (response.status === 409) {
 
-            formIcon.innerText = "✕";
-            formIcon.className = "message-icon status-error";
-            // hier noch ausgabe anpassen: message header + message text
-            formText.innerText =
-                                "E-Mail bereits vorhanden." +
-                                "Bestätigungsmail \"Neu senden\" ?";
-            
-            /*submitButton.innerText = "Neu senden";*/
-            /*buttonText.textContent = "Neu senden";*/
-            submitButton.querySelector(".button-text").textContent = "Neu senden";
-            submitButton.dataset.mode = "resend";
-            hideButtonLoading();
+    const data = await response.json();
 
-            return;
-        }
+
+    // Noch nicht bestätigt
+    if (data.message.includes("Bestätigungsmail")) {
+
+        formIcon.innerText = "✕";
+        formIcon.className = "message-icon status-error";
+
+        formText.innerText =
+            "Diese E-Mail-Adresse wurde bereits registriert. " +
+            "Die Bestätigungsmail kann erneut gesendet werden.";
+
+        submitButton.querySelector(".button-text").textContent = "Neu senden";
+        submitButton.dataset.mode = "resend";
+
+        hideButtonLoading();
+
+        return;
+    }
+
+
+    // Bereits vollständig registriert
+    formIcon.innerText = "✓";
+    formIcon.className = "message-icon status-success";
+
+    formText.innerText =
+        "Diese E-Mail-Adresse ist bereits für den Newsletter registriert.";
+
+    submitButton.querySelector(".button-text").textContent = "Updates erhalten";
+    submitButton.dataset.mode = "subscribe";
+
+    hideButtonLoading();
+
+    return;
+}
 
         
         // erfolg (einheitliche statuscodes !)
