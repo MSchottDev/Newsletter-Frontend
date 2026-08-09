@@ -353,14 +353,15 @@ body.landing {
     align-items: center;
     justify-content: center;
     gap: 10px;
-
     font-size: 13px;
     color: rgba(255,255,255,0.8);
+    text-align: center;
 }
 
 .message-icon {
-    font-size: 22px; /* größer */
+    font-size: 22px;
     line-height: 1;
+    flex-shrink: 0;
 }
 
 /* =========================

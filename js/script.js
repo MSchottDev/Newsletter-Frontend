@@ -85,7 +85,7 @@ document
 
         formText.innerText =
             "Diese E-Mail-Adresse wurde bereits registriert. " +
-            "Die Bestätigungsmail kann erneut gesendet werden.";
+            "Bestätigungsmail erneut senden ?";
 
         submitButton.querySelector(".button-text").textContent = "Neu senden";
         submitButton.dataset.mode = "resend";
@@ -130,7 +130,7 @@ document
             statusTitle.innerText = "E-Mail gespeichert";
 
             statusMessage.innerText =
-                "Sie erhalten eine Email mit dem Beestätigungs-Link.Bitte schauen Sie auch in Ihrem Spam-Ordner nach.";
+                "Sie erhalten eine Email mit dem Beestätigungs-Link. Bitte schauen Sie auch in Ihrem Spam-Ordner nach.";
             
             hideButtonLoading();
             return;
