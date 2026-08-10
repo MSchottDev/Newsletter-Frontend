@@ -22,7 +22,7 @@ document
     showButtonLoading();
     console.log("Submit-Handler läuft");
     // TEST: Ladeanimation sichtbar machen
-    await new Promise(resolve => setTimeout(resolve, 30000));
+    await new Promise(resolve => setTimeout(resolve, 3000));
     
 
     const email = e.target.email.value;
